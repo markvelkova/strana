@@ -1,0 +1,156 @@
+#rozcestnik{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 60px;
+}
+
+
+.cesta a{
+  display: block;
+  color: white;
+  font-family: Arial;
+  font-size:20px;
+  width: 200px;
+}
+
+.cesta_aktualni a{
+  display: block;
+  color: white;
+  font-family: Arial;
+  font-size:20px;
+  width: 200px;
+  background-color: grey;
+}
+
+.cesta a:hover{
+  background-color: grey;
+}
+
+
+
+table, th, td {
+  border: 2px solid;
+  border-color: black;
+  border-spacing: 0px;
+  width: 100%;
+  font-size:30px;
+}
+
+td{
+ padding:5px;
+}
+
+#zkouska {
+  background-color: cyan;
+}
+
+#koncert {
+  background-color: yellow;
+ }
+
+#nahravani{
+  background-color:pink;
+}
+#zkouska_ne {
+  background-color: cyan;
+}
+
+
+#zkouska td:first-child{
+  color: blue
+}
+
+
+#koncert td:first-child{
+  color: tomato
+}
+
+#nahravani td:first-child{
+  color: purple
+}
+
+
+em{
+  font-weight: bold;
+
+  font-style:normal;
+}
+
+
+
+
+
+#logo{
+  max-height:100px;
+  min-height:20px;
+  height:100%
+}
+
+
+
+.item0 {grid-area:logo;}
+.item1 { grid-area: header; 
+  }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; 
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template:
+  [row1-start] "logo logo header header header header"  [row1-end]
+  [row2-start] "menu main main main right right"  [row2-end]
+  [row3-start] "footer footer footer footer footer footer"  [row3-end]
+  /230px auto auto;
+
+  grid-row-gap: 10px;
+  grid-column-gap: 2px;
+  background-color: rgba(230,230,230,1);
+  padding: 10px;
+  height:fit-content;
+}
+.grid-container > div {
+  background-color: white;
+  padding: 20px 20px;
+  font-size: 30px;
+}
+
+section{
+  color: tomato;
+  font-weight: bold;
+}
+
+#hlavicka{
+  background-color: black;
+  padding: 10px 20px;
+  font-size: 60px;
+  text-align: left;
+  font-family: Arial;
+  color: white;
+}
+
+#hlavicka_txt{
+  background-color: black;
+  padding: 20px 20px;
+  font-size: 60px;
+  text-align: left;
+  font-family: Arial;
+  color: white;
+}
+
+#kokos{
+  background-color: blue;
+  padding: 20px 20px;
+}
+
+article section{
+   color: purple;
+}
+
+#lenochod{
+  font-size:10px;
+}
