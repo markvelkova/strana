@@ -10,7 +10,7 @@
     
     <form id="myForm">
         <label for="inputData">Zadejte heslo</label>
-        <input type="password" id="inputData" name="inputData" required>
+        <input type="password" id="zadany_retezec" name="zadany_retezec" required>
         <button type="button" onclick="checkPassword()">Hotovo</button>
     </form>
 
@@ -18,9 +18,9 @@
 
     <script>
         function checkPassword() {
-            var inputData = document.getElementById("inputData").value;
+            var zadany_retezec = document.getElementById("zadany_retezec").value;
 
-            if (inputData === "supersilneheslo") {
+            if (zadany_retezec === "supersilneheslo") {
                 // Redirect to the specified page
                 window.location.href = 'stealutaris.html';
             } else {
