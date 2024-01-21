@@ -9,15 +9,7 @@
 
 <h1>Vítej</h1>
 
-    <p>
-        Click on the button below to add
-        a new history state
-    </p>
- 
-    <button onclick="addState()">
-        Add history state
-    </button>
- 
+    
     <script>
         function addState() {
             let stateObj = { id: "100" };
@@ -25,6 +17,7 @@
             window.history.pushState(stateObj,
                 "Page 2", "/kokos");
         } 
+     addState()
     </script>
 
 </body>
