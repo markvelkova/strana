@@ -8,7 +8,7 @@
 
 .cesta a{
   display: block;
-  color: white;
+  color: black;
   font-family: Arial;
   font-size:20px;
   width: 200px;
@@ -16,7 +16,7 @@
 
 .cesta_aktualni a{
   display: block;
-  color: white;
+  color: black;
   font-family: Arial;
   font-size:20px;
   width: 200px;
