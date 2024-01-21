@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adiutoris vstup</title>
+</head>
+<body>
+    <a href="index.php">Zpìt na úvod, vlastnì sem nechci</a>
+    
+    <form id="myForm">
+        <label for="inputData">Zadejte heslo</label>
+        <input type="password" id="inputData" name="inputData" required>
+        <button type="button" onclick="checkPassword()">Hotovo</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function checkPassword() {
+            var inputData = document.getElementById("inputData").value;
+
+            if (inputData === "supersilneheslo") {
+                document.getElementById("result").innerHTML = "<a href='stealutaris.html'>ZDE</a>";
+            } else {
+                document.getElementById("result").innerHTML = "špatné heslo";
+            }
+        }
+    </script>
+</body>
+</html>
+
