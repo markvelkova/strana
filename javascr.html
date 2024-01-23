@@ -26,20 +26,20 @@ kontrola zmeny navigace js<br>
     <form id="formular">
         <label for="inputData">Zadejte heslo</label>
         <input type="password" id="zadany_retezec" name="zadany_retezec" required>
-        <button type="button" onclick="checkPassword()">Hotovo</button>
+        <button type="button" onclick="kontrolaHesla()">Hotovo</button>
     </form>
 
-    <div id="result"></div>
+    <div id="vysledek"></div>
 
     <script>  
-        function checkPassword() {
+        function kontrolaHesla() {
             var zadany_retezec = document.getElementById("zadany_retezec").value;
 
             if (zadany_retezec === "hroznys") {
                 // přesměrování na tajnou stránku
                 window.location.href = 'stealutaris.html';
             } else {
-                document.getElementById("result").innerHTML = "špatné heslo";
+                document.getElementById("vysledek").innerHTML = "špatné heslo";
             }
         }
     </script>
