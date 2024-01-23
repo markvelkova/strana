@@ -8,7 +8,7 @@
 <body>
     <a href="index.html">Zpět na úvod, vlastně sem nechci</a>
     
-    <form method="post" id="myForm">
+    <form id="formular">
         <label for="inputData">Zadejte heslo</label>
         <input type="password" id="zadany_retezec" name="zadany_retezec" required>
         <button type="button" onclick="checkPassword()">Hotovo</button>
@@ -29,15 +29,6 @@
                 document.getElementById("result").innerHTML = "špatné heslo";
             }
         }
-
-        const searchInput =  document.getElementById('urlInput');
-
-searchInput.addEventListener('keydown',(e)=>{
-    console.log(e.key)
-    if(e.key == 13){
-        checkPassword()
-    }
-})
     </script>
 </body>
 </html>
