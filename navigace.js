@@ -1,3 +1,4 @@
+alert("Hello! I am an alert box!!");
 document.write('necotoudelalo');
 document.write('
 <nav>
