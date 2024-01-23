@@ -17,6 +17,8 @@
     <div id="result"></div>
 
     <script>
+  
+        
         function checkPassword() {
             var zadany_retezec = document.getElementById("zadany_retezec").value;
 
@@ -27,6 +29,15 @@
                 document.getElementById("result").innerHTML = "špatné heslo";
             }
         }
+
+        const searchInput =  document.getElementById('urlInput');
+
+searchInput.addEventListener('keydown',(e)=>{
+    console.log(e.key)
+    if(e.key == 13){
+        checkPassword()
+    }
+})
     </script>
 </body>
 </html>
