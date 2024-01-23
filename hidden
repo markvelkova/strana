@@ -1,0 +1,46 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adiutoris vstup</title>
+</head>
+<body>
+
+<h1>Vítej</h1>
+<br> zmena
+   <script> 
+function persistParams() {
+  const PARAMS_KEY = "__params";
+
+  if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
+    const persistedParams = sessionStorage.getItem(PARAMS_KEY);
+
+    if (persistedParams) {
+      return persistedParams;
+    }
+  }
+
+  sessionStorage.setItem(PARAMS_KEY, location.search);
+
+  return location.search;
+}
+
+function hideParams() {
+  persistParams();
+
+  history.replaceState(null, document.title, window.location.pathname);
+
+  window.addEventListener("beforeunload", () => {
+    history.replaceState(
+      null,
+      document.title,
+      window.location.pathname + (sessionStorage.getItem(PARAMS_KEY) || "")
+    );
+  });
+}
+
+window.addEventListener("load", hideParams, false);
+</script>
+</body>
+</html>
