@@ -22,7 +22,7 @@
         </nav>
 kontrola zmeny navigace js<br>
 <script type="text/javascript" language="javascript" src="navigace.js"></script>
-<script>document.write('olihen');</script>
+<script>document.write('zemna');</script>
     <form id="formular">
         <label for="inputData">Zadejte heslo</label>
         <!--<input type="password" id="zadany_retezec" name="zadany_retezec" required class="kontrola_po_enteru" onkeydown=" kontrola_po_enteru(this)">-->
@@ -35,15 +35,15 @@ kontrola zmeny navigace js<br>
     <div id="vysledek"></div>
     <div id="vysledek2"></div>
     <script>  
+        var input = document.getElementById("zadany_retezec");
         input.addEventListener("keypress", function(event) {
-  // If the user presses the "Enter" key on the keyboard
-  if (event.key === "Enter") {
-    // Cancel the default action, if needed
-    event.preventDefault();
-    // Trigger the button element with a click
-    document.getElementById("tlacitko").click();
-  }
-});
+           if (event.key === "Enter") {
+              // Cancel the default action, if needed
+              event.preventDefault();
+              // Trigger the button element with a click
+              document.getElementById("tlacitko").click();
+           }
+        });
      
         function kontrolaHesla() {
             var zadany_retezec = document.getElementById("zadany_retezec").value;
