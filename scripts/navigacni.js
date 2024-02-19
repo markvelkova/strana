@@ -1,1 +1,1 @@
-console.log("The file was saved!");
+alert("Hello! I am an alert box!!");
