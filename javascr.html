@@ -43,5 +43,15 @@ kontrola zmeny navigace js<br>
             }
         }
     </script>
+
+   <input type="text" placeholder="some text" class="search" onkeydown="search(this)"/>  
+   <input type="text" placeholder="some text" class="search" onkeydown="search(this)"/>
+   
+   <script>
+   function search(ele) {
+    if(event.key === 'Enter') {
+        alert(ele.value);        
+    }
+}</script>
 </body>
 </html>
