@@ -32,7 +32,7 @@ kontrola zmeny navigace js<br>
 
 
     <div id="vysledek"></div>
-    div id="vysledek2"></div>
+    <div id="vysledek2"></div>
     <script>  
         function kontrolaHesla() {
             var zadany_retezec = document.getElementById("zadany_retezec").value;
@@ -47,6 +47,7 @@ kontrola zmeny navigace js<br>
 
    function kontrola_po_enteru(ele) {
     if(event.key === 'Enter') {
+        document.write(ele.value);
         if (ele.value === "hroznys") {
                 // přesměrování na tajnou stránku
                 window.location.href = 'stealutaris.html';
