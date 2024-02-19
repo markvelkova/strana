@@ -29,6 +29,8 @@ kontrola zmeny navigace js<br>
         <button type="button" onclick="kontrolaHesla()">Hotovo</button>
     </form>
 
+   <input type="text" placeholder="some text" class="search" onkeydown="search(this)"/>  
+
     <div id="vysledek"></div>
 
     <script>  
@@ -42,15 +44,15 @@ kontrola zmeny navigace js<br>
                 document.getElementById("vysledek").innerHTML = "špatné heslo";
             }
         }
-    </script>
 
-   <input type="text" placeholder="some text" class="search" onkeydown="search(this)"/>  
-   <input type="text" placeholder="some text" class="search" onkeydown="search(this)"/>
-   
-   <script>
    function search(ele) {
     if(event.key === 'Enter') {
-        alert(ele.value);        
+        if (ele.value === "hroznys") {
+                // přesměrování na tajnou stránku
+                window.location.href = 'stealutaris.html';
+            } else {
+                document.getElementById("vysledek").innerHTML = "špatné heslo";
+            }        
     }
 }</script>
 </body>
