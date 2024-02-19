@@ -46,9 +46,9 @@ kontrola zmeny navigace js<br>
         }
 
    function kontrola_po_enteru(ele) {
-     document.getElementById("vysledek2").innerHTML = "kontrola probehla";
+     
     if(event.key === 'Enter') {
-        
+        document.getElementById("vysledek2").innerHTML = "kontrola probehla";
         if (ele.value === "hroznys") {
                 // přesměrování na tajnou stránku
                 window.location.href = 'stealutaris.html';
