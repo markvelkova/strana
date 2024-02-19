@@ -25,11 +25,11 @@ kontrola zmeny navigace js<br>
 <script>document.write('olihen');</script>
     <form id="formular">
         <label for="inputData">Zadejte heslo</label>
-        <input type="password" id="zadany_retezec" name="zadany_retezec" required>
+        <input type="password" id="zadany_retezec" name="zadany_retezec" required class="search" onkeydown=" kontrola_po_enteru(this)">
         <button type="button" onclick="kontrolaHesla()">Hotovo</button>
     </form>
 
-   <input type="text" placeholder="some text" class="search" onkeydown="search(this)"/>  
+   <input type="text" placeholder="some text" class="search" onkeydown=" kontrola_po_enteru(this)"/>  
 
     <div id="vysledek"></div>
 
@@ -45,7 +45,7 @@ kontrola zmeny navigace js<br>
             }
         }
 
-   function search(ele) {
+   function kontrola_po_enteru(ele) {
     if(event.key === 'Enter') {
         if (ele.value === "hroznys") {
                 // přesměrování na tajnou stránku
