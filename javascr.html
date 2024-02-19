@@ -25,29 +25,23 @@ kontrola zmeny navigace js<br>
 <script>document.write('zemna');</script>
     <form id="formular">
         <label for="inputData">Zadejte heslo</label>
-        <!--<input type="password" id="zadany_retezec" name="zadany_retezec" required class="kontrola_po_enteru" onkeydown=" kontrola_po_enteru(this)">-->
         <input type="password" id="zadany_retezec" name="zadany_retezec" required>
-        <button type="button" id="tlacitko" onclick="kontrolaHesla()">Hotovo</button>
+        <button type="button" id="odevzdavadlo" onclick="kontrolaHesla()">Hotovo</button>
     </form>
 
-
-
     <div id="vysledek"></div>
-    <div id="vysledek2"></div>
+   
     <script>  
         var input = document.getElementById("zadany_retezec");
         input.addEventListener("keypress", function(event) {
            if (event.key === "Enter") {
-              // Cancel the default action, if needed
               event.preventDefault();
-              // Trigger the button element with a click
-              document.getElementById("tlacitko").click();
+              document.getElementById("odevzdavadlo").click();
            }
         });
      
         function kontrolaHesla() {
             var zadany_retezec = document.getElementById("zadany_retezec").value;
-
             if (zadany_retezec === "hroznys") {
                 // přesměrování na tajnou stránku
                 window.location.href = 'stealutaris.html';
@@ -55,18 +49,6 @@ kontrola zmeny navigace js<br>
                 document.getElementById("vysledek").innerHTML = "špatné heslo";
             }
         }
-
-   function kontrola_po_enteru(ele) {
-    if(event.key === 'Enter') {
-        document.getElementById("vysledek2").innerHTML = "kontrola probehla";
-        var zadany_retezec2 = document.getElementById("zadany_retezec").value;
-        if (zadany_retezec2 === "hroznys") {
-                // přesměrování na tajnou stránku
-                window.location.href = 'stealutaris.html';
-            } else {
-                document.getElementById("vysledek2").innerHTML = "špatné heslo";
-            }        
-    }
 }</script>
 </body>
 </html>
