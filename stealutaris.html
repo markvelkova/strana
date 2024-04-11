@@ -10,15 +10,24 @@
 <h1>Vítej</h1>
 <br> zmena
     
-    <script>
-        function addState() {
-            let stateObj = { id: "100" };
- 
-            window.history.pushState(stateObj,
-                "Page 3", "/strana/index.html");
-        } 
-     addState()
-    </script>
+<script>
+    function addState() {
+        let stateObj = { id: "100" };
+        let currentUrl = window.location.href;
+
+        // Check if the current URL contains "ms.mff.cuni.cz"
+        if (currentUrl.includes("ms.mff.cuni.cz")) {
+            // If the URL contains "ms.mff.cuni.cz", set the new URL accordingly
+            window.history.pushState(stateObj, "Page 3", "http://www.ms.mff.cuni.cz/~velkovm/index.html");
+        } else {
+            // Otherwise, use the default URL
+            window.history.pushState(stateObj, "Page 3", "/strana/index.html");
+        }
+    } 
+
+    addState();
+</script>
+
 
 </body>
 </html>
